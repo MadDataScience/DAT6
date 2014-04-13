@@ -4,6 +4,12 @@
  *
  * This theme is Copyright (C) 2012-2013 Owen Versteeg, http://owenversteeg.com - it is MIT licensed.
  */
+@font-face {
+  font-family: PFDinTextPro-Regular;
+  src: url("http://eklypse.github.io/DAT6/fonts/PFDinPro/PFDinTextPro-Regular.ttf"); }
+@font-face {
+  font-family: PFDinTextCompPro-Regular;
+  src: url("http://eklypse.github.io/DAT6/fonts/PFDinPro/PFDinTextCompPro-Regular.ttf"); }
 .reveal a:not(.image) {
   line-height: 1.3em; }
 
@@ -15,7 +21,7 @@ body {
   background-color: #f0f1eb; }
 
 .reveal {
-  font-family: "Palatino Linotype", "Book Antiqua", Palatino, FreeSerif, serif;
+  font-family: PFDinTextPro-Regular, "Palatino Linotype", "Book Antiqua", Palatino, FreeSerif, serif;
   font-size: 36px;
   font-weight: normal;
   letter-spacing: -0.02em;
@@ -37,7 +43,7 @@ body {
 .reveal h6 {
   margin: 0 0 20px 0;
   color: #383d3d;
-  font-family: "Palatino Linotype", "Book Antiqua", Palatino, FreeSerif, serif;
+  font-family: PFDinTextCompPro-Regular, "Palatino Linotype", "Book Antiqua", Palatino, FreeSerif, serif;
   line-height: 0.9em;
   letter-spacing: 0.02em;
   text-transform: none;

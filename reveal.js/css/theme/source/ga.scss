@@ -11,12 +11,20 @@
 @import "../template/settings";
 // ---------------------------------------------
 
+@font-face {
+	font-family: PFDinTextPro-Regular;
+	src: url('http://eklypse.github.io/DAT6/fonts/PFDinPro/PFDinTextPro-Regular.ttf');
+}
 
+@font-face {
+	font-family: PFDinTextCompPro-Regular;
+	src: url('http://eklypse.github.io/DAT6/fonts/PFDinPro/PFDinTextCompPro-Regular.ttf');
+}
 
 // Override theme settings (see ../template/settings.scss)
-$mainFont: 'Palatino Linotype', 'Book Antiqua', Palatino, FreeSerif, serif;
+$mainFont: PFDinTextPro-Regular, 'Palatino Linotype', 'Book Antiqua', Palatino, FreeSerif, serif;
 $mainColor: #000;
-$headingFont: 'Palatino Linotype', 'Book Antiqua', Palatino, FreeSerif, serif;
+$headingFont: PFDinTextCompPro-Regular, 'Palatino Linotype', 'Book Antiqua', Palatino, FreeSerif, serif;
 $headingColor: #383D3D;
 $headingTextShadow: none;
 $headingTextTransform: none;
