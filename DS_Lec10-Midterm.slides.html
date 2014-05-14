@@ -1729,6 +1729,7 @@ div.output_prompt {
 <h1 id="agenda-">Agenda:</h1>
 <ol>
 <li>Review</li>
+<li>Time Series Analysis</li>
 <li>Regularization</li>
 <li>Lab</li>
 </ol>
@@ -1754,7 +1755,8 @@ div.output_prompt {
 <li>Linear Regression</li>
 <li>Logistic Regression and Choice Modeling</li>
 <li>Nine Decades of Machine Learning</li>
-<li>Bayes and Validation</li>
+<li>Cross Validation</li>
+<li>Bayes Theorem</li>
 </ol>
 </div>
 </div>
@@ -2090,6 +2092,109 @@ div.output_prompt {
 </div>
 </div>
 </section>
+    </section><section>
+    <section>
+    
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Time-Series-Analysis">Time Series Analysis<a class="anchor-link" href="#Time-Series-Analysis">&#182;</a></h1>
+</div>
+</div>
+</div>
+<aside class="notes">
+    
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>The main difference between time series analysis and other forms of analysis is that each instance is not independant of each other instance. (e.g. Sales on day $t$ may be related to sales on day $t-1$ while sales by clerk $x$ are (hopefully) independant of sales by clerk $x-1$)</p>
+</div>
+</div>
+</div>
+    </aside></section><section>
+    
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="autoregression">Autoregression</h2>
+<p>The notation AR($p$) refers to the autoregressive model of order $p$. The AR($p$) model is written</p>
+<p>$$ X_t = c + \sum_{i=1}^p \varphi_i X_{t-i}+ \varepsilon_t .\, $$</p>
+<p>where $\varphi_1, \ldots, \varphi_p$ are parameters, $c$ is a constant, and the random variable $\varepsilon_t$ is white noise.</p>
+</div>
+</div>
+</div></section><section>
+    
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="moving-average">Moving Average</h2>
+<p>The notation MA($q$) refers to the moving average model of order $q$:</p>
+<p>$$ X_t = \mu + \varepsilon_t + \sum_{i=1}^q \theta_i \varepsilon_{t-i}\, $$</p>
+<p>where the $\theta_1, \ldots, \theta_q$ are the parameters of the model, $\mu$ is the expectation of $X_t$ (often assumed to equal 0), and the $\varepsilon_t$, $\varepsilon_{t-1}$,... are again, white noise error terms. </p>
+</div>
+</div>
+</div><aside class="notes">
+    
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>The moving-average model is essentially a finite impulse response filter with some additional interpretation placed on it.</p>
+</div>
+</div>
+</div>
+    </aside></section><section>
+    
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="arma-model">ARMA model</h2>
+<p>The notation ARMA($p, q$) refers to the model with $p$ autoregressive terms and $q$ moving-average terms. This model contains the AR($p$) and MA($q$) models,</p>
+<p>$$ X_t = c + \varepsilon_t +  \sum_{i=1}^p \varphi_i X_{t-i} + \sum_{i=1}^q \theta_i \varepsilon_{t-i}.\,$$</p>
+<p><small><em>(from <a href="http://en.wikipedia.org/wiki/Autoregressive_moving_average">Wikipedia</a>)</em></small></p>
+</div>
+</div>
+</div><div class="fragment">
+    
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Extensions include:</p>
+<ul>
+<li>ARIMA - Autoregressive <em>integrated</em> moving average</li>
+<li>ARMAX - Autoregressive–moving-average with <em>exogenous</em> inputs</li>
+</ul>
+</div>
+</div>
+</div>
+    </div><div style=display:none>
+    
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Other time series methods include:</p>
+<ul>
+<li>Time Series Principal Component Analysis</li>
+</ul>
+</div>
+</div>
+</div>
+    </div></section>
     </section><section>
     <section>
     
